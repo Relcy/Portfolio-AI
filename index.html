@@ -1196,7 +1196,7 @@ async function generatePost() {
     + 'Return ONLY the post text. No intro, no explanation.';
 
   try {
-    const res  = await fetch('/api/generate', {
+    const res  = await fetch('https://portfolio-api.ruzariorelcy.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -1230,7 +1230,7 @@ async function getHashtags() {
   box.textContent = 'Fetching hashtags…';
   const prompt = 'Suggest 6-8 LinkedIn hashtags for a data analytics + marketing professional in Australia based on this post. Return ONLY the hashtags separated by spaces.\n\nPost:\n' + saved;
   try {
-    const res = await fetch('/api/generate', {
+    const res = await fetch('https://portfolio-api.ruzariorelcy.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
